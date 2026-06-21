@@ -1,0 +1,1367 @@
+/* Variables de color y tipografía para mantener la elegancia */
+:root {
+    --bg-color: #F8F6F0; /* Crema suave */
+    --text-color: #2D2D2D; /* Gris muy oscuro, casi negro */
+    --accent-color: #5A6B53; /* Verde oliva oscuro y elegante */
+    --font-titulos: 'Playfair Display', serif;
+    --font-textos: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-textos);
+    line-height: 1.6;
+}
+
+/* ================= NAVEGACIÓN ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%; /* Reducimos ligeramente el padding vertical para centrar el logo */
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #EAEAEA; /* Una línea sutil divisoria estilo museo */
+}
+
+/* Control del tamaño y proporción del logo */
+.logo-img {
+    height: 60px;      /* Altura ideal para que se vea fino y no ocupe demasiado espacio */
+    width: auto;       /* Hace que el ancho se adapte automáticamente sin deformar la imagen */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto sutil al pasar el mouse sobre el logo */
+.logo-img:hover {
+    transform: scale(1.02);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* Espaciado entre enlaces */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+/* Ocultamos los íconos de navegación en pantallas de escritorio */
+.nav-icon {
+    display: none;
+}
+
+/* ================= HERO SECTION ================= */
+/* ================= HERO SECTION (CROSS-FADE ELEGANTE) ================= */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.hero-slides {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1; /* Al fondo de todo */
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Totalmente invisibles por defecto */
+    transition: opacity 2s ease-in-out; /* Aquí se define la finura y lentitud del cambio */
+}
+
+.slide.active {
+    opacity: 1; /* Solo la imagen con la clase 'active' se desvanece a la vista */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); 
+    z-index: 2; /* Por encima de las imágenes, por debajo del texto */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3; /* Al frente de todo para que sea clickeable y legible */
+    color: #ffffff;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: var(--font-titulos);
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.btn-primario {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: all 0.4s ease;
+}
+
+.btn-primario:hover {
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+/* ================= INTRO (TARJETAS) ================= */
+.intro-section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.intro-header h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.intro-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espacio entre tarjetas */
+}
+
+/* Diseño de la tarjeta elegante */
+.tarjeta-intro {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    text-align: left;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tarjeta-intro:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* La imagen de la tarjeta */
+.tarjeta-intro img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Para que la imagen no se deforme */
+    display: block;
+}
+
+.tarjeta-contenido {
+    padding: 25px;
+}
+
+.tarjeta-contenido h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.tarjeta-contenido p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ================= GRID ODS (ÍCONOS OFICIALES) ================= */
+.ods-section {
+    padding: 40px 8% 100px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.ods-titulo {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.ods-grid {
+    display: grid;
+    /* Las hacemos un poco más grandes para que luzcan los íconos */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.ods-card {
+    background-color: transparent; /* Quitamos el fondo blanco */
+    border: none; /* Quitamos bordes */
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 3px;
+    overflow: hidden; /* Evita que la imagen se salga del borde redondeado */
+}
+
+/* Efecto hover elegante para los íconos */
+.ods-card:hover {
+    transform: scale(1.05); /* Se agranda un poquito */
+    filter: brightness(1.1); /* Se ilumina un poco */
+}
+
+.ods-icono {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* ================= SECCIÓN DECÁLOGO ================= */
+.decalogo-header {
+    text-align: center;
+    padding: 80px 8% 40px;
+    background-color: var(--bg-color);
+}
+
+.decalogo-header h1 {
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.decalogo-header p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contenedor de Pestañas (Botones) */
+.tabs-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 1px solid #D1CFC8;
+    font-family: var(--font-textos);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+}
+
+/* Cuadrícula de Compromisos */
+.decalogo-section {
+    padding: 20px 8% 100px;
+}
+
+.decalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.decalogo-card {
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.decalogo-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 40px rgba(90, 107, 83, 0.05);
+}
+
+.card-numero {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    font-style: italic;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.decalogo-card h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.decalogo-card .resumen {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Ocultamos el bloque largo de información en la tarjeta principal */
+.detalle-oculto {
+    display: none;
+}
+
+/* ================= MODAL INTERACTIVO ESTILO MUSEO ================= */
+.decalogo-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px); /* Difumina suavemente el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.decalogo-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-contenido {
+    background-color: var(--bg-color);
+    padding: 60px 50px;
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    border: 1px solid #D1CFC8;
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: left;
+}
+
+.decalogo-modal.open .modal-contenido {
+    transform: translateY(0);
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 20px; right: 25px;
+    background: none; border: none;
+    font-size: 2rem; cursor: pointer;
+    color: #999;
+}
+
+.modal-numero {
+    font-family: var(--font-titulos);
+    font-size: 4rem;
+    font-style: italic;
+    color: var(--accent-color);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#modal-titulo {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.modal-cuerpo p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.modal-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* ================= SECCIÓN PODCAST (SPLIT LAYOUT) ================= */
+.podcast-container {
+    display: flex;
+    min-height: calc(100vh - 86px - 70px); /* Ajuste dinámico restando Navbar y Footer */
+    background-color: var(--bg-color);
+}
+
+/* Bloque de Imagen Ocupa el 45% exacto */
+.podcast-cover-wrapper {
+    flex: 0 0 45%;
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+.podcast-cover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.podcast-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efecto dramático de exposición al pasar el mouse por la sección */
+.podcast-container:hover .podcast-cover img {
+    transform: scale(1.04);
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);
+    pointer-events: none;
+}
+
+/* Bloque de Contenido Ocupa el 55% */
+.podcast-content {
+    flex: 0 0 55%;
+    padding: 80px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.podcast-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.podcast-titulo {
+    font-family: var(--font-titulos);
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.podcast-meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.meta-separador {
+    margin: 0 10px;
+    color: #D1CFC8;
+}
+
+.podcast-descripcion {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 45px;
+    max-width: 580px;
+}
+
+/* ================= REPRODUCTOR MINIMALISTA CUSTOM ================= */
+.custom-player {
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    padding: 25px 30px;
+    max-width: 580px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.player-controles {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botón Play Redondo Minimalista */
+.player-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.player-btn:hover {
+    background-color: var(--text-color);
+    transform: scale(1.05);
+}
+
+.player-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+}
+
+/* Barra de Tiempo Interactiva */
+.progreso-contenedor {
+    flex: 1;
+    cursor: pointer;
+    padding: 10px 0; /* Área de click aumentada */
+}
+
+.progreso-linea {
+    width: 100%;
+    height: 3px;
+    background-color: #E8E6E0;
+    position: relative;
+}
+
+.progreso-actual {
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 0; left: 0;
+    transition: width 0.1s linear;
+}
+
+/* Contadores numéricos */
+.player-tiempo {
+    font-family: var(--font-textos);
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    gap: 4px;
+    min-width: 80px;
+    justify-content: flex-end;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive para Pantallas Medianas/Pequeñas */
+@media (max-width: 992px) {
+    .podcast-container {
+        flex-direction: column;
+    }
+    .podcast-cover-wrapper, .podcast-content {
+        flex: 0 0 100%;
+    }
+    .podcast-cover-wrapper {
+        height: 350px;
+    }
+    .podcast-content {
+        padding: 50px 8%;
+    }
+}
+
+
+/* ================= SECCIÓN VIDEOS (SIMETRÍA PREMIUM) ================= */
+.videos-container {
+    padding: 80px 8% 120px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.videos-header {
+    margin-bottom: 60px;
+}
+
+.videos-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.videos-header h1 {
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.videos-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Grilla fija de dos columnas idénticas */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.video-card {
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+/* Forzar proporción 16:9 exacta sin importar el tamaño de pantalla */
+.video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Relación de aspecto clásica 16:9 */
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-thumbnail {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-card:hover .video-thumbnail {
+    transform: scale(1.04);
+}
+
+/* Filtro translúcido sobre el póster */
+.video-overlay-card {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.video-card:hover .video-overlay-card {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Botón de Play Flotante */
+.play-icon-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.video-card:hover .play-icon-circle {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+}
+
+.play-icon-circle svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+    margin-left: 4px; /* Pequeño ajuste geométrico para centrar el triángulo */
+    transition: fill 0.3s ease;
+}
+
+.video-card:hover .play-icon-circle svg {
+    fill: #fff;
+}
+
+.video-info {
+    padding: 30px;
+}
+
+.video-info h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.video-info p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ================= REGISTRO LIGHTBOX (MODAL DE VIDEO) ================= */
+.video-lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.video-lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    width: 90%;
+    max-width: 950px;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-lightbox.open .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -45px; right: 0;
+    background: none; border: none;
+    color: #fff; font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color);
+}
+
+.video-wrapper-iframe {
+    position: relative;
+    padding-top: 56.25%; /* Mantiene 16:9 en el reproductor */
+    background-color: #000;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.video-wrapper-iframe iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+}
+
+/* Adaptación para pantallas móviles */
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .video-info {
+        padding: 20px;
+    }
+}
+
+
+/* ================= SECCIÓN GALERÍA (MUSEUM MOSAIC) ================= */
+.galeria-header {
+    text-align: center;
+    padding: 80px 8% 40px;
+    background-color: var(--bg-color);
+}
+
+.galeria-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.galeria-header h1 {
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.galeria-header p {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Botones de Categorías */
+.galeria-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: 8px 22px;
+    background: transparent;
+    border: 1px solid #D1CFC8;
+    font-family: var(--font-textos);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtro-btn:hover, .filtro-btn.active {
+    background-color: var(--text-color);
+    color: #fff;
+    border-color: var(--text-color);
+}
+
+/* Configuración Bento Grid / Mosaic */
+.galeria-section {
+    padding: 20px 8% 120px;
+    background-color: var(--bg-color);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-auto-rows: 280px; /* Altura base del bloque */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Modificadores estructurales de asimetría */
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #EAEAEA;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@media (min-width: 768px) {
+    .item-wide {
+        grid-column: span 2; /* Ocupa dos columnas */
+    }
+    .item-tall {
+        grid-row: span 2; /* Ocupa dos filas de altura */
+    }
+}
+
+.img-wrapper {
+    width: 100%; height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-wrapper img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Capa de información oculta que sube suavemente */
+.item-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.item-info {
+    transform: translateY(15px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    color: #fff;
+}
+
+.item-cat {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #C0CBB7; /* Tono verde oliva suave */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.item-info h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.item-fecha {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Efectos Hover combinados */
+.galeria-item:hover .img-wrapper img {
+    transform: scale(1.05);
+}
+
+.galeria-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.galeria-item:hover .item-info {
+    transform: translateY(0);
+}
+
+/* ================= LIGHTBOX FOTOGRÁFICO AVANZADO ================= */
+.galeria-lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(247, 245, 240, 0.85); /* Fondo claro de museo */
+    backdrop-filter: blur(15px); /* Desenfoque extremo ultra elegante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.galeria-lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px; right: 40px;
+    background: none; border: none;
+    font-size: 3rem; font-weight: 300;
+    cursor: pointer; color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg);
+}
+
+/* Caja contenedora: Diseño limpio tipo Portfolio */
+.lightbox-box {
+    background-color: #fff;
+    border: 1px solid #E2E0D9;
+    max-width: 1000px;
+    width: 90%;
+    display: flex;
+    box-shadow: 0 40px 90px rgba(0,0,0,0.08);
+    transform: scale(0.97);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.galeria-lightbox.open .lightbox-box {
+    transform: scale(1);
+}
+
+#lightbox-img {
+    width: 60%;
+    max-height: 75vh;
+    object-fit: cover;
+    background-color: #f2f2f2;
+}
+
+.lightbox-caption {
+    width: 40%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    border-left: 1px solid #E2E0D9;
+}
+
+.caption-cat {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 500;
+}
+
+#lightbox-titulo {
+    font-family: var(--font-titulos);
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#lightbox-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.caption-fecha {
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* Ajustes Responsive para la Ficha Técnica */
+@media (max-width: 850px) {
+    .lightbox-box {
+        flex-direction: column;
+    }
+    #lightbox-img {
+        width: 100%;
+        height: 40vh;
+    }
+    .lightbox-caption {
+        width: 100%;
+        padding: 30px;
+        border-left: none;
+        border-top: 1px solid #E2E0D9;
+    }
+    #lightbox-titulo {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* ================= MODAL DE EXHIBICIÓN ODS (TAMAÑO REDUCIDO PREMIUM) ================= */
+.ods-lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(248, 246, 240, 0.85); /* Tono crema de tu sitio */
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.ods-lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ods-close-btn {
+    position: absolute;
+    top: 25px; right: 35px;
+    background: none; border: none;
+    font-size: 2.8rem; font-weight: 200;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.ods-close-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Caja de Proporciones Reducidas y Elegantes */
+.ods-modal-box {
+    background-color: #fff;
+    border: 1px solid #E2E0D9;
+    max-width: 820px; /* Tamaño reducido de alta gama */
+    width: 90%;
+    display: flex;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.05);
+    transform: scale(0.98);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ods-lightbox.open .ods-modal-box {
+    transform: scale(1);
+}
+
+/* Equilibrio exacto del 50% */
+.ods-modal-media {
+    width: 50%;
+    background-color: #FAF9F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#modal-ods-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ficha descriptiva compacta */
+.ods-modal-caption {
+    width: 50%;
+    padding: 35px 40px; /* Reducción de espaciados internos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    border-left: 1px solid #E2E0D9;
+}
+
+.ods-badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+#modal-ods-titulo {
+    font-family: var(--font-titulos);
+    font-size: 1.6rem; /* Tipografía más fina y contenida */
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.ods-divider {
+    width: 35px;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.ods-modal-caption h3 {
+    font-family: var(--font-textos);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.ods-meta-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.ods-detalle-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsividad para pantallas móviles */
+@media (max-width: 768px) {
+    .ods-modal-box {
+        flex-direction: column;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    .ods-modal-media {
+        width: 100%;
+        height: 28vh;
+    }
+    .ods-modal-caption {
+        width: 100%;
+        padding: 25px;
+        border-left: none;
+        border-top: 1px solid #E2E0D9;
+    }
+    #modal-ods-titulo {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* ================= RESPONSIVE DESIGN (Celulares) ================= */
+@media (max-width: 768px) {
+    .intro-columnas {
+        flex-direction: column; /* Pasa de horizontal a vertical en móviles */
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none; /* Aquí luego puedes implementar un menú hamburguesa */
+    }
+}
+
+/* ================= RESPONSIVE: MÓVILES (ESTILO APP PREMIUM) ================= */
+@media (max-width: 768px) {
+    
+    /* Ocultamos el botón de hamburguesa sobrante */
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* Ajustamos la barra superior para que el logo luzca como una firma de museo */
+    .navbar {
+        padding: 14px 5%;
+        justify-content: center;
+        border-bottom: 1px solid #EAEAEA;
+    }
+
+    /* Construcción de la barra inferior fija */
+    .nav-links {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 68px; /* Un poco más alto para dar respiro al conjunto ícono+texto */
+        background-color: rgba(248, 246, 240, 0.96); /* Crema institucional */
+        backdrop-filter: blur(12px); /* Esmerilado sutil */
+        border-top: 1px solid #E4E2DA; /* Separador fino armónico */
+        display: flex !important;
+        flex-direction: row; 
+        justify-content: space-around; 
+        align-items: center;
+        padding: 0 8px;
+        margin: 0;
+        z-index: 9999;
+    }
+
+    .nav-links li {
+        width: auto;
+        margin: 0;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Convertimos el enlace en un contenedor vertical centrado */
+    .nav-links a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px; /* Espaciado interno perfecto entre el ícono y el texto */
+        color: #7A7872; /* Gris intermedio sofisticado para el estado reposo */
+        text-decoration: none;
+        padding: 6px 0;
+        transition: color 0.3s ease;
+        border-bottom: none !important;
+    }
+
+    /* Hacemos visibles los íconos y controlamos sus dimensiones finas */
+    .nav-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        stroke: currentColor; /* Obliga al ícono a heredar el color del texto */
+        transition: stroke 0.3s ease;
+    }
+
+    /* Tipografía micro-ajustada para los rótulos */
+    .nav-text {
+        font-family: var(--font-textos);
+        font-size: 0.62rem; /* Tamaño compacto ultra elegante */
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+
+    /* Estado Activo: Cuando el usuario está parado en esa página */
+    .nav-links a.active {
+        color: var(--accent-color); /* Cambia texto e ícono al verde oliva selecto */
+    }
+    
+    .nav-links a.active .nav-text {
+        font-weight: 700; /* Le da un ligero peso visual extra sin romper el esquema */
+    }
+
+    /* Colchón preventivo inferior para evitar superposiciones con contenidos */
+    body {
+        padding-bottom: 75px;
+    }
+}

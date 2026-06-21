@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos de Evidencias | Proyecto ODS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Logo Proyecto ODS" class="logo-img">
+            </a>
+        </div>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li>
+                <a href="index.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="decalogos.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2-2.5z"/><path d="M6 6h10M6 10h10"/></svg>
+                    <span class="nav-text">Decálogo</span>
+                </a>
+            </li>
+            <li>
+                <a href="podcast.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                    <span class="nav-text">Podcast</span>
+                </a>
+            </li>
+            <li>
+                <a href="videos.html" class="active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="4" rx="2" ry="2"/><polygon points="10 9 15 11.5 10 14 10 9"/></svg>
+                    <span class="nav-text">Videos</span>
+                </a>
+            </li>
+            <li>
+                <a href="galeria.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <span class="nav-text">Galería</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="videos-container">
+        <header class="videos-header">
+            <span class="videos-tag">Evidencias Visuales</span>
+            <h1>Producciones Audiovisuales</h1>
+            <p>Explora nuestros videos y documentaciones digitales donde exponemos problemáticas ambientales y las soluciones planteadas durante el proyecto.</p>
+        </header>
+        
+        <section class="videos-grid">
+            
+            <div class="video-card" data-video-url="https://www.youtube.com/embed/Ftv2A43yrXQ?si=u5hK3EHe7SnDHhDv">
+                <div class="video-thumbnail-wrapper">
+                    <img src="assets/miniatura.png" alt="Miniatura Cortometraje Conciencia Líquida" class="video-thumbnail">
+                    <div class="video-overlay-card">
+                        <div class="play-icon-circle">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3>Video: Hogares Eco Amigables</h3>
+                    <p>Un recorrido por las acciones sostenibles que transforman nuestros hogares en espacios más responsables frente al cambio climático, aplicando estrategias de mitigación y adaptación desde nuestra realidad cotidiana.</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-video-url="https://www.youtube.com/embed/P3SSKym3HJ0?si=DljMafbLf1-Pcc8o">
+                <div class="video-thumbnail-wrapper">
+                    <img src="assets/miniatura1.png" alt="Miniatura Documental Huella Zero" class="video-thumbnail">
+                    <div class="video-overlay-card">
+                        <div class="play-icon-circle">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3>Reportaje: Hogares que Transforman</h3>
+                    <p>Un recorrido sobre cómo pequeños cambios en nuestros hábitos diarios permiten reducir el desperdicio de recursos y convertir nuestro hogar en un espacio más sostenible.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="video-lightbox" id="video-lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar reproductor">&times;</button>
+            <div class="video-wrapper-iframe">
+                <iframe id="lightbox-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Desarrollado con dedicación por estudiantes de la <strong>Universidad César Vallejo (UCV)</strong>.</p>
+    </footer>
+
+    <script src="js/videos.js"></script>
+</body>
+</html>

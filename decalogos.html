@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Decálogo | Proyecto ODS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Logo Proyecto ODS" class="logo-img">
+            </a>
+        </div>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li>
+                <a href="index.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="decalogos.html" class="active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2-2.5z"/><path d="M6 6h10M6 10h10"/></svg>
+                    <span class="nav-text">Decálogo</span>
+                </a>
+            </li>
+            <li>
+                <a href="podcast.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                    <span class="nav-text">Podcast</span>
+                </a>
+            </li>
+            <li>
+                <a href="videos.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="4" rx="2" ry="2"/><polygon points="10 9 15 11.5 10 14 10 9"/></svg>
+                    <span class="nav-text">Videos</span>
+                </a>
+            </li>
+            <li>
+                <a href="galeria.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <span class="nav-text">Galería</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header class="decalogo-header">
+        <h1>Decálogo Sostenible</h1>
+        <p>Nuestros 10 compromisos prácticos para mitigar el impacto ambiental desde nuestra rutina académica y del hogar.</p>
+        
+        <div class="tabs-contenedor">
+            <button class="tab-btn active" data-filter="todos">Ver Todo</button>
+            <button class="tab-btn" data-filter="hidrica">Huella Hídrica</button>
+            <button class="tab-btn" data-filter="carbono">Huella de Carbono</button>
+        </div>
+    </header>
+
+    <section class="decalogo-section">
+        <div class="decalogo-grid" id="decalogo-grid">
+            
+            <div class="decalogo-card" data-category="hidrica">
+                <span class="card-numero">01</span>
+                <h3>Reducir el tiempo en ducha</h3>
+                <p class="resumen">Compromiso de optimización del baño diario.</p>
+                <div class="detalle-oculto">
+                    <p>Nos comprometemos a limitar el baño diario de 5 a 8 minutos, utilizando un temporizador o una canción de esa duración.</p>
+                    <span class="badge">Huella Hídrica</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="hidrica">
+                <span class="card-numero">02</span>
+                <h3>Reducir la proteína animal</h3>
+                <p class="resumen">Sustitución estratégica de alimentos.</p>
+                <div class="detalle-oculto">
+                    <p>Nos comprometemos a sustituir la carne de res por legumbres ya que producir un kilo de ternera requiere aproximadamente 15,000 litros de agua (AQUAE Fundación, s.f.).</p>
+                    <span class="badge">Huella Hídrica</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="hidrica">
+                <span class="card-numero">03</span>
+                <h3>Recoger agua "gris" y reutilizarla</h3>
+                <p class="resumen">Reciclaje hídrico doméstico.</p>
+                <div class="detalle-oculto">
+                    <p>Nos comprometemos a colocar un balde en la ducha mientras sale el agua caliente y usarla para regar plantas, limpiar pisos o descargar el inodoro, etc.</p>
+                    <span class="badge">Huella Hídrica</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="hidrica">
+                <span class="card-numero">04</span>
+                <h3>Consumo de moda circular</h3>
+                <p class="resumen">Evitar el impacto del fast fashion.</p>
+                <div class="detalle-oculto">
+                    <p>Evitaremos la compra de prendas de ropa innecesarias. Según Guzmán (2022) "Un pantalón de mezclilla ocupa 10 mil litros de agua".</p>
+                    <span class="badge">Huella Hídrica</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="hidrica">
+                <span class="card-numero">05</span>
+                <h3>Mantenimiento de fugas</h3>
+                <p class="resumen">Reparación preventiva en el hogar.</p>
+                <div class="detalle-oculto">
+                    <p>Revisaremos y repararemos cualquier goteo en grifos o tanques de inodoro. Una gota por segundo puede desperdiciar más de 4 litros al día.</p>
+                    <span class="badge">Huella Hídrica</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="carbono">
+                <span class="card-numero">06</span>
+                <h3>Desconexión de "vampiros"</h3>
+                <p class="resumen">Gestión de la energía fantasma.</p>
+                <div class="detalle-oculto">
+                    <p>Nos comprometemos a desenchufar cargadores, laptops y electrodomésticos que no se estén usando.</p>
+                    <span class="badge">Huella de Carbono</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="carbono">
+                <span class="card-numero">07</span>
+                <h3>Optimización del transporte</h3>
+                <p class="resumen">Movilidad estudiantil sostenible.</p>
+                <div class="detalle-oculto">
+                    <p>Nos comprometemos a priorizar el uso de bicicleta, caminata o transporte público para asistir a clases.</p>
+                    <span class="badge">Huella de Carbono</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="carbono">
+                <span class="card-numero">08</span>
+                <h3>Regla de las 3R académicas</h3>
+                <p class="resumen">Uso responsable de materiales de estudio.</p>
+                <div class="detalle-oculto">
+                    <p>Utilizaremos libretas de papel reciclado, imprimir solo lo estrictamente necesario (siempre por ambas caras) y priorizar el uso de archivos digitales.</p>
+                    <span class="badge">Huella de Carbono</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="carbono">
+                <span class="card-numero">09</span>
+                <h3>Residuos orgánicos</h3>
+                <p class="resumen">Reducción activa de gas metano.</p>
+                <div class="detalle-oculto">
+                    <p>Separaremos los residuos en casa e iniciaremos un compostero casero si el espacio lo permite, para reducir la producción de metano.</p>
+                    <span class="badge">Huella de Carbono</span>
+                </div>
+            </div>
+
+            <div class="decalogo-card" data-category="carbono">
+                <span class="card-numero">10</span>
+                <h3>Rechazo de plásticos</h3>
+                <p class="resumen">Eliminación de embalajes de un solo uso.</p>
+                <div class="detalle-oculto">
+                    <p>Nos comprometemos a llevar siempre un kit reutilizable (botella de agua, cubiertos y bolsa de tela) para evitar la compra de productos envasados en plástico o poliestireno.</p>
+                    <span class="badge">Huella de Carbono</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="decalogo-modal" id="decalogo-modal">
+        <div class="modal-contenido">
+            <button class="modal-cerrar">&times;</button>
+            <span class="modal-numero" id="modal-numero">00</span>
+            <h2 id="modal-titulo">Título del Compromiso</h2>
+            <div class="modal-cuerpo" id="modal-cuerpo">
+                </div>
+            <span class="modal-badge" id="modal-badge">Categoría</span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Desarrollado con dedicación por estudiantes de la <strong>Universidad César Vallejo (UCV)</strong>.</p>
+    </footer>
+
+    <script src="js/decalogo.js"></script>
+</body>
+</html>

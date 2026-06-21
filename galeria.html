@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Evidencias Sostenibles | Proyecto ODS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+        <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Logo Proyecto ODS" class="logo-img">
+            </a>
+        </div>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li>
+                <a href="index.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="decalogos.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2-2.5z"/><path d="M6 6h10M6 10h10"/></svg>
+                    <span class="nav-text">Decálogo</span>
+                </a>
+            </li>
+            <li>
+                <a href="podcast.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                    <span class="nav-text">Podcast</span>
+                </a>
+            </li>
+            <li>
+                <a href="videos.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="4" rx="2" ry="2"/><polygon points="10 9 15 11.5 10 14 10 9"/></svg>
+                    <span class="nav-text">Videos</span>
+                </a>
+            </li>
+            <li>
+                <a href="galeria.html" class="active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <span class="nav-text">Galería</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="galeria-header">
+        <span class="galeria-tag">Evidencias de Gestión</span>
+        <h1>Registro de Acciones Sostenibles</h1>
+        <p>Catálogo visual interactivo que recopila el cumplimiento y la ejecución del plan de sustentabilidad doméstica y comunitaria.</p>
+        
+        <div class="galeria-filtros">
+            <button class="filtro-btn active" data-target="todas">Todas las Evidencias</button>
+            <button class="filtro-btn" data-target="agua">ODS 6</button>
+            <button class="filtro-btn" data-target="energia">ODS 7 y ODS 11</button>
+            <button class="filtro-btn" data-target="ambiente">ODS 12 y ODS 13</button>
+        </div>
+    </header>
+
+    <main class="galeria-section">
+        <div class="galeria-grid">
+            
+            <div class="galeria-item item-wide" data-category="agua">
+                <div class="img-wrapper">
+                    <img src="assets/galeria1-2.jpeg" alt="Charla informativa con diapositivas dirigida a la familia para promover hábitos responsables de ahorro de agua y energía en el hogar.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 1 • ODS 6</span>
+                            <h3>Charla Educativa Familiar</h3>
+                            <span class="item-fecha">Semana 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-category="agua">
+                <div class="img-wrapper">
+                    <img src="assets/galeria1-1.jpg" alt="Explicación detallada a un familiar a través de un afiche impreso explicativo, con el objetivo de promover hábitos responsables de ahorro de agua y energía.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 1 • ODS 6</span>
+                            <h3>Inducción con Afiche Impreso</h3>
+                            <span class="item-fecha">Semana 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-category="agua">
+                <div class="img-wrapper">
+                    <img src="assets/galeria1-3.jpeg" alt="Charla de concientización para promover hábitos responsables de ahorro de agua y energía, enfocada en pequeñas acciones cotidianas que se pueden realizar en casa.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 1 • ODS 6</span>
+                            <h3>Taller de Pequeñas Acciones Domésticas</h3>
+                            <span class="item-fecha">Semana 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="agua">
+                <div class="img-wrapper">
+                    <img src="assets/galeria2-2.jpeg" alt="Demostración del cierre adecuado del caño para fomentar el ahorro de agua mediante el control y mantenimiento preventivo de grifos.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 2 • ODS 6</span>
+                            <h3>Cierre Correcto de Grifos (I)</h3>
+                            <span class="item-fecha">Semana 7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="agua">
+                <div class="img-wrapper">
+                    <img src="assets/galeria2-5.jpeg" alt="Verificación del cierre óptimo y hermético del caño para asegurar el ahorro hídrico y consolidar hábitos responsables mediante la correcta manipulación de grifos.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 2 • ODS 6</span>
+                            <h3>Cierre Correcto de Grifos (II)</h3>
+                            <span class="item-fecha">Semana 7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-category="agua">
+                <div class="img-wrapper">
+                    <img src="assets/galeria2-4.jpg" alt="Supervisión y cierre completo de caños residenciales para mitigar pérdidas innecesarias de agua y fomentar el cuidado del recurso hídrico.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 2 • ODS 6</span>
+                            <h3>Cierre Correcto de Grifos (III)</h3>
+                            <span class="item-fecha">Semana 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="energia">
+                <div class="img-wrapper">
+                    <img src="assets/galeria3-3.jpeg" alt="Desconexión manual y activa de electrodomésticos y dispositivos eléctricos cuando no están en uso para erradicar el consumo pasivo de energía.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 3 • ODS 7</span>
+                            <h3>Desconexión de Equipos en Desuso</h3>
+                            <span class="item-fecha">Semana 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="ambiente">
+                <div class="img-wrapper">
+                    <img src="assets/galeria3-1.jpg" alt="Apagado deliberado de los sistemas de iluminación del hogar en ambientes y habitaciones vacías que no se encuentran en uso activo.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 3 • ODS 12 y ODS 13</span>
+                            <h3>Gestión Eficiente de Luces (I)</h3>
+                            <span class="item-fecha">Semana 7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="energia">
+                <div class="img-wrapper">
+                    <img src="assets/galeria3-2.jpeg" alt="Control de consumo energético familiar mediante el apagado consciente de focos y luminarias residenciales cuando no estén en uso.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 3 • ODS 7</span>
+                            <h3>Gestión Eficiente de Luces (II)</h3>
+                            <span class="item-fecha">Semana 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-wide" data-category="ambiente">
+                <div class="img-wrapper">
+                    <img src="assets/galeria4-1.jpeg" alt="Desarrollo de charlas explicativas orientadas a la correcta interpretación, lectura y seguimiento métrico de los medidores residenciales.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 4 • ODS 12 y ODS 13</span>
+                            <h3>Interpretación de Medidores</h3>
+                            <span class="item-fecha">Semana 9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-wide" data-category="ambiente">
+                <div class="img-wrapper">
+                    <img src="assets/galeria5-1.jpeg" alt="Charla vecinal de concientización ambiental de proximidad dirigida a una vecina cercana mediante el uso interactivo de un afiche impreso.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 5 • ODS 12 y ODS 13</span>
+                            <h3>Concientización a la Comunidad</h3>
+                            <span class="item-fecha">Semana 10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="ambiente">
+                <div class="img-wrapper">
+                    <img src="assets/galeria5-2.jpg" alt="Colocación estratégica de recomendaciones escritas en los sanitarios y baños para incentivar permanentemente el ahorro de agua y concientizar al hogar.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 5 • ODS 12 y ODS 13</span>
+                            <h3>Fijación de Recomendaciones en Baños</h3>
+                            <span class="item-fecha">Semana 10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="energia">
+                <div class="img-wrapper">
+                    <img src="assets/galeria6-1.jpeg" alt="Uso e integración eficiente en el hogar de electrodomésticos de línea blanca, como refrigeradoras eficientes de bajo consumo energético.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 6 • ODS 7</span>
+                            <h3>Monitoreo de Electrodomésticos Eficientes</h3>
+                            <span class="item-fecha">Semana 11</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="energia">
+                <div class="img-wrapper">
+                    <img src="assets/galeria7-1.jpeg" alt="Sustitución integral de focos tradicionales obsoletos por luminarias de tecnología LED de alta eficiencia energética.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 7 • ODS 7</span>
+                            <h3>Sustitución e Instalación de Focos LED</h3>
+                            <span class="item-fecha">Semana 12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-tall" data-category="energia">
+                <div class="img-wrapper">
+                    <img src="assets/galeria8-2.jpeg" alt="Inspección técnica y revisión del estado general del sistema de tuberías hidráulicas del hogar para prevenir fugas invisibles.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 8 • ODS 7 y 11 </span>
+                            <h3>Revisión de Red de Tuberías (I)</h3>
+                            <span class="item-fecha">Semana 13</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="galeria-item item-wide" data-category="energia">
+                <div class="img-wrapper">
+                    <img src="assets/galeria8-1.jpeg" alt="Diagnóstico físico exhaustivo y comprobación del estado de conservación de las tuberías sanitarias del hogar para optimizar el recurso.">
+                    <div class="item-overlay">
+                        <div class="item-info">
+                            <span class="item-cat">Acción 8 • ODS 7 y 11</span>
+                            <h3>Revisión de Red de Tuberías (II)</h3>
+                            <span class="item-fecha">Semana 14</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="galeria-lightbox" id="galeria-lightbox">
+        <button class="lightbox-close" id="galeria-close">&times;</button>
+        <div class="lightbox-box">
+            <img id="lightbox-img" src="" alt="Vista expandida">
+            <div class="lightbox-caption">
+                <span id="lightbox-cat" class="caption-cat">Categoría</span>
+                <h3 id="lightbox-titulo">Título de la Fotografía</h3>
+                <p id="lightbox-desc">Descripción detallada de la acción realizada.</p>
+                <span id="lightbox-fecha" class="caption-fecha">Fecha</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Desarrollado con dedicación por estudiantes de la <strong>Universidad César Vallejo (UCV)</strong>.</p>
+    </footer>
+
+    <script src="js/galeria.js"></script>
+</body>
+</html>

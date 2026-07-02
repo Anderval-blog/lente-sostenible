@@ -67,18 +67,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // ================= LIGHTBOX PARA IMÁGENES DEL PROYECTO =================
+// ================= LÓGICA DEL LIGHTBOX (AMPLIAR PLANOS/RENDERS) =================
     const zoomableImages = document.querySelectorAll('.zoomable-img');
-    const lightboxOverlay = document.getElementById('image-lightbox');
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
     const lightboxTarget = document.getElementById('lightbox-target');
     const closeLightboxBtn = document.querySelector('.close-lightbox');
 
-    if (lightboxOverlay) {
-        // Abrir Modal
+    if (lightboxOverlay && lightboxTarget && closeLightboxBtn) {
+        // Abrir Modal al hacer click en cualquier imagen con la clase zoomable-img
         zoomableImages.forEach(img => {
             img.addEventListener('click', function() {
-                lightboxTarget.src = this.src; // Copia la fuente de la imagen clickeada
-                lightboxOverlay.classList.remove('hidden');
+                lightboxTarget.src = this.src; // Copia la ruta de la imagen clickeada
+                lightboxOverlay.classList.remove('hidden'); // Muestra el modal
             });
         });
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
             lightboxOverlay.classList.add('hidden');
         });
 
-        // Cerrar Modal haciendo click fuera de la imagen
+        // Cerrar Modal haciendo click en el espacio oscuro exterior
         lightboxOverlay.addEventListener('click', (e) => {
             if (e.target === lightboxOverlay) {
                 lightboxOverlay.classList.add('hidden');

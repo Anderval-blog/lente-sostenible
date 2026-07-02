@@ -185,13 +185,6 @@
     </div>
 
 
-    <div id="image-lightbox" class="img-modal-overlay hidden">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-target" src="" alt="Vista ampliada">
-        
-    </div>
-
-
 <section class="project-showcase">
         <header class="project-header">
             <span class="project-tag">Caso de Estudio</span>
@@ -218,24 +211,72 @@
 
         <hr class="phase-divider">
 
-        <div class="project-phase">
-            <div class="phase-meta">
+        <div class="project-phase phase-compact">
+            <div class="phase-meta compact-meta">
                 <h4>02 / Propuesta Sostenible</h4>
-                <p>Integración de sistemas de captación, paneles solares y redistribución eficiente.</p>
+                <p>Integración de ecotecnologías y optimización de recursos residenciales.</p>
             </div>
-            <div class="phase-split">
-                <div class="img-wrapper large-wrapper">
-                    <img src="assets/Plano/CUARTO 2.png" alt="Plano Sostenible con Leyenda" class="zoomable-img">
-                    <span class="img-caption">Plano rediseñado (Click para leer leyenda)</span>
+            
+            <div class="phase-split split-balanced">
+                <div class="img-wrapper blueprint-wrapper">
+                    <img src="assets/Plano/CUARTO 2.png" alt="Plano Sostenible" class="zoomable-img">
+                    <span class="img-caption">Distribución técnica (Click para ampliar)</span>
                 </div>
-                <div class="phase-text-content">
-                    <h5>Leyenda de Intervención</h5>
-                    <ul class="editorial-list">
-                        <li><strong>A.</strong> Paneles Solares Fotovoltaicos (ODS 7)</li>
-                        <li><strong>B.</strong> Sistema de Captación Pluvial (ODS 6)</li>
-                        <li><strong>C.</strong> Ventilación Cruzada Pasiva (ODS 11)</li>
-                        <li><strong>D.</strong> Zona de Segregación de Residuos (ODS 12)</li>
-                        <li><strong>E.</strong> Zona de Segregación de Residuos (ODS 12)</li>
+                
+                <div class="legend-container-refined">
+                    <h5 class="legend-title-refined">Leyenda de Componentes</h5>
+                    <ul class="legend-architectural-compact">
+                        
+                        <li class="legend-item-compact">
+                            <div class="icon-frame-native">
+                                <img src="assets/iconos/5-removebg-preview.png" alt="Panel Solar" class="native-icon-img">
+                            </div>
+                            <div class="legend-text-compact">
+                                <h6>Paneles Solares</h6>
+                                <p>Generación de energía limpia en techumbre.</p>
+                            </div>
+                        </li>
+
+                        <li class="legend-item-compact">
+                            <div class="icon-frame-native">
+                                <img src="assets/iconos/1-removebg-preview (1).png" alt="Iluminación" class="native-icon-img">
+                            </div>
+                            <div class="legend-text-compact">
+                                <h6>Iluminación LED</h6>
+                                <p>Luminarias de bajo consumo.</p>
+                            </div>
+                        </li>
+
+                        <li class="legend-item-compact">
+                            <div class="icon-frame-native">
+                                <img src="assets/iconos/4-removebg-preview.png" alt="Grifería" class="native-icon-img">
+                            </div>
+                            <div class="legend-text-compact">
+                                <h6>Griferías de Flujo Reducido</h6>
+                                <p>Dispositivos diseñados para limitar el consumo de agua.</p>
+                            </div>
+                        </li>
+
+                        <li class="legend-item-compact">
+                            <div class="icon-frame-native">
+                                <img src="assets/iconos/3-removebg-preview.png" alt="Reciclaje" class="native-icon-img">
+                            </div>
+                            <div class="legend-text-compact">
+                                <h6>Estación de Segregación</h6>
+                                <p>Punto limpio para clasificación de residuos.</p>
+                            </div>
+                        </li>
+
+                        <li class="legend-item-compact">
+                            <div class="icon-frame-native">
+                                <img src="assets/iconos/2-removebg-preview.png" alt="Vegetación" class="native-icon-img">
+                            </div>
+                            <div class="legend-text-compact">
+                                <h6>Sistemas de plantas verticales</h6>
+                                <p>Estructuras que permiten optimizar el espacio al máximo.</p>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -245,7 +286,7 @@
 
         <div class="project-phase">
             <div class="phase-meta">
-                <h4>03 / Implementación 3D</h4>
+                <h4>03 / Modelado 3D</h4>
                 <p>Visualización del impacto espacial de las modificaciones sostenibles aplicadas.</p>
             </div>
             
@@ -261,11 +302,16 @@
         </div>
     </section>
 
-
     <footer class="footer">
         <p>Desarrollado con dedicación por estudiantes de la <strong>Universidad César Vallejo (UCV)</strong>.</p>
     </footer>
 
-    <script src="js/decalogo.js"></script>
+
+<div id="lightbox-overlay" class="lightbox-overlay hidden">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-target" src="" alt="Vista Ampliada">
+</div>
+
+<script src="js/decalogo.js"></script>
 </body>
 </html>

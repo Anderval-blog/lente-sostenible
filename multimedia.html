@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos de Evidencias | Proyecto ODS</title>
+    <link rel="icon" type="image/png" href="assets/logo-ventana.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Logo Proyecto ODS" class="logo-img">
+            </a>
+        </div>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li>
+                <a href="index.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="decalogos.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2-2.5z"/><path d="M6 6h10M6 10h10"/></svg>
+                    <span class="nav-text">Actividades</span>
+                </a>
+            </li>
+            <li>
+                <a href="interactivo.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <span class="nav-text">Publicar</span>
+                </a>
+            </li>
+            <li>
+                <a href="multimedia.html" class="active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="4" rx="2" ry="2"/><polygon points="10 9 15 11.5 10 14 10 9"/></svg>
+                    <span class="nav-text">Multimedia</span>
+                </a>
+            </li>
+            <li>
+                <a href="galeria.html">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <span class="nav-text">Galería</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="videos-container">
+        <header class="videos-header">
+            <span class="videos-tag">Evidencias Visuales</span>
+            <h1>Producciones Audiovisuales</h1>
+            <p>Explora nuestros videos y documentaciones digitales donde exponemos problemáticas ambientales y las soluciones planteadas durante el proyecto.</p>
+        </header>
+        
+        <section class="videos-grid">
+            
+            <div class="video-card" data-video-url="https://www.youtube.com/embed/I9hTfc0Hirs?si=m2df0HXQAEpsNZSI">
+                <div class="video-thumbnail-wrapper">
+                    <img src="assets/miniatura.png" alt="Miniatura Cortometraje Conciencia Líquida" class="video-thumbnail">
+                    <div class="video-overlay-card">
+                        <div class="play-icon-circle">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3>Video: Hogares Eco Amigables</h3>
+                    <p>Un recorrido por las acciones sostenibles que transforman nuestros hogares en espacios más responsables frente al cambio climático, aplicando estrategias de mitigación y adaptación desde nuestra realidad cotidiana.</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-video-url="https://www.youtube.com/embed/P3SSKym3HJ0?si=DljMafbLf1-Pcc8o">
+                <div class="video-thumbnail-wrapper">
+                    <img src="assets/miniatura1.png" alt="Miniatura Documental Huella Zero" class="video-thumbnail">
+                    <div class="video-overlay-card">
+                        <div class="play-icon-circle">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3>Reportaje: Hogares que Transforman</h3>
+                    <p>Un recorrido sobre cómo pequeños cambios en nuestros hábitos diarios permiten reducir el desperdicio de recursos y convertir nuestro hogar en un espacio más sostenible.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="video-lightbox" id="video-lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar reproductor">&times;</button>
+            <div class="video-wrapper-iframe">
+                <iframe id="lightbox-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+        <main class="podcast-container">
+        
+        <div class="podcast-cover-wrapper">
+            <div class="podcast-cover">
+                <img src="assets/podcast-cover1.jpg" alt="Portada de la producción: Eco Voces UCV">
+                <div class="cover-overlay"></div>
+            </div>
+        </div>
+
+        <div class="podcast-content">
+            <span class="podcast-tag">Episodio Especial</span>
+            <h1 class="podcast-titulo">Eco Voces: "Hogares Ecoeficientes: Sintonizando el ODS 7"</h1>
+            
+            <div class="podcast-meta">
+                <span><strong>Locución:</strong> Equipo 7</span>
+                <span class="meta-separador">|</span>
+                <span><strong>Duración:</strong> 5:00 min</span>
+            </div>
+
+            <p class="podcast-descripcion">
+                En este episodio exploramos los resultados de nuestra investigación sobre el consumo energético del hogar, analizando los datos recolectados para descubrir qué dispositivos tienen mayor impacto y cómo nuestras decisiones diarias pueden influir en el uso responsable de la energía. Acompáñanos a reflexionar sobre la relación entre tecnología, consumo y sostenibilidad desde nuestro propio entorno."
+            </p>
+
+            <div class="custom-player">
+                <audio id="podcast-audio" src="assets/podcast-ods.MP3" preload="metadata"></audio>
+
+                <div class="player-controles">
+                    <button id="btn-play-pause" class="player-btn" aria-label="Reproducir">
+                        <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="icon-pause hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+
+                    <div class="progreso-contenedor">
+                        <div class="progreso-linea" id="progreso-linea">
+                            <div class="progreso-actual" id="progreso-actual"></div>
+                        </div>
+                    </div>
+
+                    <div class="player-tiempo">
+                        <span id="tiempo-actual">00:00</span>
+                        <span class="tiempo-separador">/</span>
+                        <span id="tiempo-total">00:00</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Desarrollado con dedicación por estudiantes de la <strong>Universidad César Vallejo (UCV)</strong>.</p>
+    </footer>
+
+    <script src="js/videos.js"></script>
+    <script src="js/podcast.js"></script>
+</body>
+</html>

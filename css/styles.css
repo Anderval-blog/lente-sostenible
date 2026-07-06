@@ -1639,18 +1639,18 @@ body {
 
 .hero-badge {
     font-family: var(--font-textos);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--accent-color); 
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
 .hero-title-1 {
     font-family: var(--font-titulos); 
-    font-size: 2.8rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 500;
     color: var(--text-color);
     line-height: 1.2;
     margin-bottom: 20px;
@@ -2021,7 +2021,26 @@ body {
     transform: translateY(-1px);
 }
 
+/* ================= CORRECCIONES FINALES ================= */
 
+/* 1. Bloquear el redimensionamiento del área de texto */
+#action-desc {
+    resize: none; /* Evita que el usuario altere el tamaño de la caja */
+}
+
+/* 2. Estilo para el texto de 'Cargando...' y mensajes de estado vacío */
+.mural-loading-status p {
+    font-family: var(--font-textos);
+    font-size: 1rem;
+    color: #888888; /* Gris suave que coincide con el diseño */
+    font-style: italic;
+    font-weight: 400;
+    margin: 40px auto;
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ================= RESPONSIVE DESIGN (Celulares) ================= */
 @media (max-width: 768px) {

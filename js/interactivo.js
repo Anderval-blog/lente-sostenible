@@ -1,7 +1,7 @@
 // js/interactivo.js
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 // ================= CREDENCIALES =================
 const firebaseConfig = {
@@ -60,21 +60,54 @@ onSnapshot(q, (snapshot) => {
         return;
     }
 
-    snapshot.forEach((doc) => {
-        const data = doc.data();
+    snapshot.forEach((docItem) => {
+        const data = docItem.data();
         const cardEl = document.createElement('div');
         cardEl.classList.add('art-card');
+        
+        // Obtenemos el número de inspiraciones (si no existe, es 0)
+        const likes = data.inspiraciones || 0;
         
         cardEl.innerHTML = `
             <div class="art-card-frame">
                 <img src="${data.imageUrl}" alt="${data.title}" loading="lazy">
             </div>
             <div class="art-card-details">
-                <h4>${data.title}</h4>
-                <span class="art-author-info">Autor: ${data.author}</span>
+                <div class="art-card-text">
+                    <h4>${data.title}</h4>
+                    <span class="art-author-info">Autor: ${data.author}</span>
+                </div>
+                <div class="art-card-actions">
+                    <button class="btn-inspirar" data-id="${docItem.id}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        <span class="inspirar-count">${likes}</span> Inspirar
+                    </button>
+                </div>
             </div>
         `;
-        cardEl.addEventListener('click', () => abrirVisorHistoria(data));
+
+        // Lógica para abrir el visor solo si NO se hace clic en el botón de inspirar
+        cardEl.addEventListener('click', (e) => {
+            if (!e.target.closest('.btn-inspirar')) {
+                abrirVisorHistoria(data);
+            }
+        });
+
+        // Lógica del botón Inspirar
+        const btnInspirar = cardEl.querySelector('.btn-inspirar');
+        btnInspirar.addEventListener('click', async (e) => {
+            e.stopPropagation(); // Evita que se abra el modal
+            
+            // Efecto visual instantáneo para que se sienta rápido
+            btnInspirar.classList.add('inspirado');
+            
+            // Actualización en la base de datos de Firebase
+            const docRef = doc(db, "mural", docItem.id);
+            await updateDoc(docRef, {
+                inspiraciones: increment(1)
+            });
+        });
+
         galleryContainer.appendChild(cardEl);
     });
 });
@@ -128,7 +161,8 @@ if(uploadForm) {
                 title: actionTitle,
                 description: actionDescription,
                 imageUrl: imageUrl,
-                timestamp: Date.now() 
+                timestamp: Date.now(),
+                inspiraciones: 0 // <-- ¡Nueva línea agregada!
             });
 
             uploadForm.reset();

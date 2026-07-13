@@ -2040,6 +2040,75 @@ body {
 }
 
 
+/* ================= BOTÓN INSPIRAR (MURAL) ================= */
+.art-card-details {
+    padding: 20px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px; /* Asegura que todas las tarjetas tengan una altura simétrica */
+}
+
+.art-card-actions {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #EAEAEA; /* Línea divisoria muy fina y elegante */
+}
+
+.btn-inspirar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid #D1CFC8; /* Gris suave */
+    color: var(--text-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: var(--font-textos);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-inspirar svg {
+    width: 16px;
+    height: 16px;
+    transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.btn-inspirar:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-inspirar:hover svg {
+    transform: scale(1.1);
+}
+
+/* Efecto cuando ya se le dio clic (Inspirado) */
+.btn-inspirar.inspirado {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(90, 107, 83, 0.05); /* Un fondo verde super transparente */
+}
+
+.btn-inspirar.inspirado svg {
+    fill: var(--accent-color);
+    stroke: var(--accent-color);
+    animation: palpitar 0.3s ease-in-out;
+}
+
+@keyframes palpitar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
 /*------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ================= RESPONSIVE DESIGN (Celulares) ================= */
